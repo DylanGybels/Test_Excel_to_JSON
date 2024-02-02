@@ -23,7 +23,6 @@ def convert_from_excel_to_json(main_dir: str):
 
     with open(os.path.join(main_dir, 'test.json'), 'w') as fp:
         json.dump(data, fp)
-    os.remove(os.path.join(main_dir, 'test.xlsx'))
 
 
 def convert_from_json_to_excel(main_dir: str):
@@ -40,7 +39,6 @@ def convert_from_json_to_excel(main_dir: str):
         index += 1
 
     wb.save(os.path.join(main_dir, 'test.xlsx'))
-    os.remove(os.path.join(main_dir, 'test.json'))
 
 
 if __name__ == "__main__":
